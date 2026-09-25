@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gingado | A melhor loja do Brasil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="announce">Lançamentos limitados - garanta já o seu</div>
+
+<header class="head">
+  <div class="bar">
+    <a class="logo" href="#" aria-label="Gingado, início">
+      <svg viewBox="0 0 30 26" aria-hidden="true"><path fill="#8CE000" d="M11 0h17l-2.4 5.6H13.2C9.6 5.6 7.4 7.8 6.5 10.8 5.4 14.6 7.3 17.4 11 17.4h4.3l1.2-2.8H11.8l2.2-5.2h11.4L21 20.6C19.8 23.6 17.4 26 12.4 26H9.6C2.6 26-1.4 20.2.5 13.6 2.3 6.6 6.4 0 11 0z"/></svg>
+      <span>INGADO</span>
+    </a>
+    <button class="cartbtn" id="openCart" aria-label="Abrir sacola">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="n" id="count">0</span>
+    </button>
+  </div>
+</header>
+
+<nav class="menu" aria-label="Categorias">
+  <a href="#catalogo" data-cat="chuteiras">Chuteiras</a>
+  <a href="#catalogo" data-cat="camisas">Camisas</a>
+  <a href="#catalogo" data-cat="boleiro">Boleiro</a>
+</nav>
+
+<section class="hero">
+  <svg class="bg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="dk" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0c0c0c"/></radialGradient>
+      <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".035 .5" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="34"/></filter>
+    </defs>
+    <rect width="800" height="500" fill="url(#dk)"/>
+    <g filter="url(#rough)">
+      <path d="M-40 330 C160 250 360 290 520 230 C640 185 760 190 860 150 L860 250 C740 290 640 300 520 340 C360 395 160 380 -40 430Z" fill="#2F8F1E"/>
+      <path d="M-40 250 C140 200 300 220 470 175 C600 140 720 120 860 90 L860 150 C720 185 600 205 470 245 C300 290 140 280 -40 320Z" fill="#3FA82A" opacity=".85"/>
+      <path d="M60 380 C240 330 420 340 600 300 C700 280 780 270 860 260 L860 290 C760 305 680 320 600 340 C420 380 240 385 60 410Z" fill="#1F6E14" opacity=".9"/>
+    </g>
+  </svg>
+  <div class="in">
+    <h1>A melhor loja<br>do Brasil</h1>
+    <a class="cta" href="#catalogo" data-cat="all">Catálogo completo</a>
+  </div>
+</section>
+
+<section class="sec" id="catalogo">
+  <div class="sec-head">
+    <h2 id="secTitle">Novidades</h2>
+    <button id="seeAll">Veja Tudo</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<footer>
+  <div class="logo">
+    <svg viewBox="0 0 30 26" aria-hidden="true"><path fill="#8CE000" d="M11 0h17l-2.4 5.6H13.2C9.6 5.6 7.4 7.8 6.5 10.8 5.4 14.6 7.3 17.4 11 17.4h4.3l1.2-2.8H11.8l2.2-5.2h11.4L21 20.6C19.8 23.6 17.4 26 12.4 26H9.6C2.6 26-1.4 20.2.5 13.6 2.3 6.6 6.4 0 11 0z"/></svg>
+    <span>INGADO</span>
+  </div>
+  <p>Pagamento no Pix ou cartão</p>
+  <p>Atendimento pelo WhatsApp</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="pp" id="pp" role="dialog" aria-modal="true" aria-label="Produto" aria-hidden="true"></div>
+
+<aside class="drawer" id="drawer" aria-label="Sacola" aria-hidden="true">
+  <header><h2>Sua sacola</h2><button class="x" id="closeCart" aria-label="Fechar">&times;</button></header>
+  <div class="items" id="items"></div>
+  <div class="dfoot">
+    <div class="tot"><span>Total no Pix</span><span id="total">R$ 0,00</span></div>
+    <input id="cname" placeholder="Seu nome" autocomplete="name" aria-label="Seu nome">
+    <a class="btn btn-wa" id="wa" target="_blank" rel="noopener">Finalizar pelo WhatsApp</a>
+    <p class="note">O frete é calculado na conversa, pelo seu CEP.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
