@@ -1,5 +1,4 @@
-{
-  "name": "gingado-loja",
+ "name": "gingado-loja",
   "version": "1.0.0",
   "description": "Loja online Gingado - chuteiras de futsal e society",
   "main": "server.js",
